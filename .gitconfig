@@ -1,0 +1,14 @@
+[user]
+	name = Amr M. Kayid
+	email = amrkayid2027@gmail.com
+[credential]
+	helper = osxkeychain
+[core]
+	excludesfile = /Users/amrmkayid/.gitignore
+[mergetool "sublime"]
+	cmd = subl -w $MERGED
+	trustExitCode = false
+[merge]
+	tool = sublime
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
