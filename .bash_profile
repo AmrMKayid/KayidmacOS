@@ -35,10 +35,13 @@ export PATH="/Users/amrmkayid/anaconda3/bin:$PATH"
 
 #export PATH="$PATH:/Library/PostgreSQL/10/bin:$PATH"
 
-# Aliases
+#--------------- Aliases ---------------#
 alias ds='cd Desktop/'
 alias proxy='export http_proxy="http://amr.kayid:<P@55w0rd>@50.0.0.5:8080/"; export https_proxy="http://amr.kayid:<P@55w0rd>@50.0.0.5:8080/"; export ftp_proxy="http://amr.kayid:<P@55w0rd>@50.0.0.5:8080/";'
 
 alias nawwar='nodemon --exec npm run dev'
 alias nawwarBack='nodemon --exec npm run devBack'
 alias py3='/Users/amrmkayid/.pyenv/shims/python3'
+
+## git
+alias gi='git init && cp /Users/amrmkayid/.gitignore . &&  touch README.md && git add . && git commit -m "Initial commit"'
