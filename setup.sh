@@ -33,5 +33,28 @@ else
   print 'Homebrew is already installed!';
   print 'Updating homebrew && upgrading all formulas'
   brew update
-  brew upgrade --all
+  brew upgrade
 fi
+
+
+apps=(
+  atom
+  sublime-text
+  intellij-idea
+  pycharm
+  clion
+  webstorm
+  google-chrome
+  slack
+  spotify
+  alfred
+  java
+  xquartz
+  vagrant
+  virtualbox
+  vlc
+  webpquicklook
+)
+
+print 'Intalling my Apps'
+brew cask install  --appdir="/Applications" ${apps[@]}
