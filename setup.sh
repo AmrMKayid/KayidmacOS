@@ -27,8 +27,11 @@ fi
 
 print "#--- Homebrew ---#"
 if test ! $(which brew); then
-  print "Installing homebrew..."
+  print 'Installing homebrew...'
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
   print 'Homebrew is already installed!';
+  print 'Updating homebrew && upgrading all formulas'
+  brew update
+  brew upgrade --all
 fi
