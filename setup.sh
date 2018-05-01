@@ -37,6 +37,23 @@ else
 fi
 
 
+formulas=(
+  coreutils # GNU core utilities
+  moreutils
+  findutils
+  bash
+  wget --with-iri
+  git
+  heroku-toolbelt
+  vim --override-system-vi
+  python3
+)
+
+print 'Intalling brew formulas'
+print ${formulas[@]}
+brew install ${formulas[@]}
+
+
 apps=(
   atom
   sublime-text
@@ -52,9 +69,15 @@ apps=(
   xquartz
   vagrant
   virtualbox
+  docker
+  macdown
   vlc
-  webpquicklook
+  # QuickLook
+  qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch
+  quicklook-csv qlimagesize webpquicklook suspicious-package
+  launchrocket # manage homebrew formulas
 )
 
 print 'Intalling my Apps'
+print ${apps[@]}
 brew cask install  --appdir="/Applications" ${apps[@]}
