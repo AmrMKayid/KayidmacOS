@@ -38,7 +38,8 @@ fi
 
 
 formulas=(
-  coreutils # GNU core utilities
+  # GNU core utilities
+  coreutils
   moreutils
   findutils
   bash
@@ -47,6 +48,13 @@ formulas=(
   heroku-toolbelt
   vim --override-system-vi
   python3
+  # C/C++
+  cmake
+  gcc
+  go
+  # MEAN Stack
+  mongodb
+  node
 )
 
 print 'Intalling brew formulas'
@@ -70,8 +78,10 @@ apps=(
   vagrant
   virtualbox
   docker
+  docker-toolbox
   macdown
   vlc
+  android-file-transfer
   # QuickLook
   qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch
   quicklook-csv qlimagesize webpquicklook suspicious-package
