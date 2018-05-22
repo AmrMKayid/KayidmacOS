@@ -25,6 +25,30 @@ else
 fi
 
 
+print "#--- Finder ---#"
+
+print "Show hidden and dotfiles files"
+defaults write com.apple.Finder AppleShowAllFiles -bool true
+defaults write com.apple.finder AppleShowAllFiles TRUE
+
+print "Show files extensions"
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+print "Use list view"
+defaults write com.apple.finder FXPreferredViewStyle Nlsv
+
+
+print "Stop creating .DS_Store"
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+print "Enable Text selection in Quick View"
+defaults write com.apple.finder QLEnableTextSelection -bool true
+
+print "Show the ~/Library folder"
+chflags nohidden ~/Library
+
+
+
 print "#--- Homebrew ---#"
 if test ! $(which brew); then
   print 'Installing homebrew...'
