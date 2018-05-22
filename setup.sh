@@ -115,3 +115,14 @@ apps=(
 print 'Intalling my Apps'
 print ${apps[@]}
 brew cask install  --appdir="/Applications" ${apps[@]}
+
+
+
+
+
+if test ! $(which zsh); then
+  print 'Installing oh-my-zsh...'
+  sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+else
+  print 'Zsh is already installed!';
+fi
