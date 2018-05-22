@@ -47,6 +47,26 @@ defaults write com.apple.finder QLEnableTextSelection -bool true
 print "Show the ~/Library folder"
 chflags nohidden ~/Library
 
+killall Finder
+
+
+if test ! $(which zsh); then
+  print 'Installing oh-my-zsh...'
+  curl -L http://install.ohmyz.sh | sh
+else
+  print 'Zsh is already installed!'
+  echo "Do you want to re-install zsh? (y/n)"
+  read -r response
+  case $response in
+    [yY])
+      print 'Removing old zsh'
+      rm -rf /Users/amrmkayid/.oh-my-zsh
+      print 'Re-Installing oh-my-zsh...'
+      curl -L http://install.ohmyz.sh | sh
+      break;;
+    *) break;;
+  esac
+fi
 
 
 print "#--- Homebrew ---#"
@@ -116,13 +136,4 @@ print 'Intalling my Apps'
 print ${apps[@]}
 brew cask install  --appdir="/Applications" ${apps[@]}
 
-
-
-
-
-if test ! $(which zsh); then
-  print 'Installing oh-my-zsh...'
-  sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-else
-  print 'Zsh is already installed!';
-fi
+brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
