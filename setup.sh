@@ -60,6 +60,7 @@ else
   case $response in
     [yY])
       print 'Removing old zsh'
+      # uninstall_oh_my_zsh
       rm -rf /Users/amrmkayid/.oh-my-zsh
       print 'Re-Installing oh-my-zsh...'
       curl -L http://install.ohmyz.sh | sh
@@ -67,6 +68,10 @@ else
     *) break;;
   esac
 fi
+
+ln -sf "$(pwd)/.zshrc" ~/.zshrc
+cp "$(pwd)/kayid.zsh-theme" ~/.oh-my-zsh/themes/
+
 
 
 print "#--- Homebrew ---#"
