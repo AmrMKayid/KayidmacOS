@@ -4,7 +4,7 @@ alias proxy='export http_proxy="http://amr.kayid:<P@55w0rd>@50.0.0.5:8080/"; exp
 
 
 #--------------- git ---------------#
-alias gi='git init && cp ~/.gitignore . && cp ~/LICENSE . &&  touch README.md && git add . && git commit -m "Initial commit"'
+alias gi='git init && cp ~/.gitignore . && cp ~/LICENSE . &&  echo "# `basename $PWD`" >> README.md && git add . && git commit -m "Initial commit"'
 
 
 #--------------- Python ---------------#
