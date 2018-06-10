@@ -10,7 +10,7 @@ export PATH="/Users/amrmkayid/anaconda3/bin:$PATH"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes sonicradish steeef
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes sonicradish steeef smt
 ZSH_THEME="kayid"
 
 
@@ -64,7 +64,7 @@ ZSH_THEME="kayid"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
+  git colored-man colorize pip python osx zsh-syntax-highlighting
 )
 
 source $HOME/.aliases
