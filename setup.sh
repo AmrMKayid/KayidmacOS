@@ -25,6 +25,63 @@ else
 fi
 
 
+print "#--- Homebrew ---#"
+if test ! $(which brew); then
+  print 'Installing homebrew...'
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+else
+  print 'Homebrew is already installed!';
+  print 'Updating homebrew && upgrading all formulas'
+  brew update && brew upgrade
+fi
+
+
+formulas=(
+  # GNU core utilities
+  coreutils moreutils findutils
+  bash vim --override-system-vi
+  wget --with-iri
+  git heroku-toolbelt
+  python python3
+  # C/C++
+  cmake gcc
+  go
+  # MEAN Stack
+  mongodb
+  node
+)
+
+print 'Intalling brew formulas'
+print ${formulas[@]}
+brew install ${formulas[@]}
+
+
+apps=(
+  iterm2
+  alfred
+  atom sublime-text
+  intellij-idea pycharm clion webstorm
+  google-chrome slack
+  java
+  xquartz
+  vagrant virtualbox
+  docker boot2docker docker-toolbox
+  macdown
+  vlc spotify
+  android-file-transfer
+  # QuickLook
+  qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch
+  quicklook-csv qlimagesize webpquicklook suspicious-package
+  launchrocket # manage homebrew formulas
+)
+
+print 'Intalling my Apps'
+print ${apps[@]}
+brew cask install  --appdir="/Applications" ${apps[@]}
+
+brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
+
+
 print "#--- macOS ---#"
 
 # Disable the “Are you sure you want to open this application?” dialog
@@ -152,6 +209,8 @@ for app in "Finder" "Dock" "Activity Monitor" "Address Book" "Calendar" "Contact
 done
 
 
+print "#--- Oh my Zsh ---#"
+
 if test ! $(which zsh); then
   print 'Installing oh-my-zsh...'
   curl -L http://install.ohmyz.sh | sh
@@ -173,75 +232,3 @@ fi
 
 ln -sf "$(pwd)/.zshrc" ~/.zshrc
 cp "$(pwd)/kayid.zsh-theme" ~/.oh-my-zsh/themes/
-
-
-
-print "#--- Homebrew ---#"
-if test ! $(which brew); then
-  print 'Installing homebrew...'
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-else
-  print 'Homebrew is already installed!';
-  print 'Updating homebrew && upgrading all formulas'
-  brew update && brew upgrade
-fi
-
-
-formulas=(
-  # GNU core utilities
-  coreutils
-  moreutils
-  findutils
-  bash
-  wget --with-iri
-  git
-  heroku-toolbelt
-  vim --override-system-vi
-  python3
-  # C/C++
-  cmake
-  gcc
-  go
-  # MEAN Stack
-  mongodb
-  node
-)
-
-print 'Intalling brew formulas'
-print ${formulas[@]}
-brew install ${formulas[@]}
-
-
-apps=(
-  iterm2
-  atom
-  sublime-text
-  intellij-idea
-  pycharm
-  clion
-  webstorm
-  google-chrome
-  slack
-  spotify
-  alfred
-  java
-  xquartz
-  vagrant
-  virtualbox
-  docker
-  boot2docker
-  docker-toolbox
-  macdown
-  vlc
-  android-file-transfer
-  # QuickLook
-  qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch
-  quicklook-csv qlimagesize webpquicklook suspicious-package
-  launchrocket # manage homebrew formulas
-)
-
-print 'Intalling my Apps'
-print ${apps[@]}
-brew cask install  --appdir="/Applications" ${apps[@]}
-
-brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
