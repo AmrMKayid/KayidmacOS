@@ -1,5 +1,5 @@
 # mac-dev
-Mac OS X Development Environment Setup
+macOS Development Environment Setup
 
 
 Credits
