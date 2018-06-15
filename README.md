@@ -8,3 +8,4 @@ Credits
 This repo builds on the awesome work from the following repos:
 
 * [dev-setup](https://github.com/donnemartin/dev-setup) by Donne Martin
+* [dotfiles](https://github.com/mathiasbynens/dotfiles) by Mathias Bynens
