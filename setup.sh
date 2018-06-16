@@ -38,17 +38,25 @@ fi
 
 formulas=(
   # GNU core utilities
-  coreutils moreutils findutils
-  bash vim --override-system-vi
+  coreutils 
+  moreutils 
+  findutils
+  bash 
+  zsh 
+  vim --override-system-vi
   wget --with-iri
-  git heroku-toolbelt
-  python python3
+  git 
+  heroku-toolbelt
+  python 
+  python3
   # C/C++
-  cmake gcc
+  cmake 
+  gcc
   go
   # MEAN Stack
   mongodb
   node
+  tree # recursive directory listing
 )
 
 print 'Intalling brew formulas'
@@ -71,7 +79,7 @@ apps=(
   android-file-transfer
   # QuickLook
   qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch
-  quicklook-csv qlimagesize webpquicklook suspicious-package
+  quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
   launchrocket # manage homebrew formulas
 )
 
@@ -94,6 +102,9 @@ defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
 # Save screenshots to the Desktop/Screenshots
 mkdir ${HOME}/Desktop/Screenshots
 defaults write com.apple.screencapture location -string "${HOME}/Desktop/Screenshots"
+
+# Enable repeating keys
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 
 print "#--- Finder ---#"
@@ -131,6 +142,9 @@ defaults write com.apple.dock tilesize -int 37
 
 # Make Dock icons of hidden applications translucent
 defaults write com.apple.dock showhidden -bool true
+
+# Remove workspace auto-switching
+defaults write com.apple.dock workspaces-auto-swoosh -bool NO
 
 
 print "#--- Terminal & iTerm2 ---#"
