@@ -24,7 +24,7 @@
 
 
 
-local purple="$FG[097]"
+local purple="$FG[099]"
 local orange="$FG[202]"
 local yellow="$FG[214]"
 local cyan="$FG[117]"
