@@ -1,5 +1,5 @@
-# mac-dev
-macOS Development Environment Setup
+# KayidmacOS
+My macOS Development Environment Setup
 
 
 Credits
