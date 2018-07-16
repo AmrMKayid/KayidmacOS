@@ -47,8 +47,12 @@ formulas=(
   wget --with-iri
   git 
   heroku-toolbelt
+  pyenv
   python 
   python3
+  octave
+  rbenv
+  ruby
   # C/C++
   cmake 
   gcc
@@ -56,7 +60,10 @@ formulas=(
   # MEAN Stack
   mongodb
   node
+  mysql
+  sqlite
   tree # recursive directory listing
+  wifi-password
 )
 
 print 'Intalling brew formulas'
@@ -235,7 +242,7 @@ else
   case $response in
     [yY])
       print 'Removing old zsh'
-      # uninstall_oh_my_zsh
+      uninstall_oh_my_zsh
       sudo rm -rf /Users/amrmkayid/.oh-my-zsh
       print 'Re-Installing oh-my-zsh...'
       curl -L http://install.ohmyz.sh | sh
