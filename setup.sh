@@ -74,6 +74,7 @@ brew install ${formulas[@]}
 apps=(
   iterm2
   alfred
+  caffeine
   atom sublime-text
   intellij-idea pycharm clion webstorm
   google-chrome slack
