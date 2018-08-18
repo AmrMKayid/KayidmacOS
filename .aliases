@@ -12,6 +12,10 @@ alias py3='/Users/amrmkayid/.pyenv/shims/python3'
 
 
 
+#--------------- Game Dev ---------------#
+
+alias love="/Applications/love.app/Contents/MacOS/love"
+
 #--------------- Extra ---------------#
 
 # Easier navigation: .., ..., ...., ....., ~ and -
