@@ -92,6 +92,8 @@ fabric.properties
 # Compiled Python files
 *.pyc
 
+# Jupyter notebook
+.ipynb_checkpoints/
 
 #------------ React Native ------------#
 
