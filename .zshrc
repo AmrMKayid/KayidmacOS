@@ -4,14 +4,17 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/amrmkayid/.oh-my-zsh
 
-# added by Anaconda3 5.1.0 installer
-export PATH="/Users/amrmkayid/anaconda3/bin:$PATH"
-
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes sonicradish steeef smt
 ZSH_THEME="kayid"
+
+# homebrew path
+export PATH="/usr/local/sbin:$PATH"
+
+# Anaconda
+export PATH="/Users/amrmkayid/anaconda3/bin:$PATH"
 
 
 # Set list of themes to load
@@ -97,4 +100,4 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# alias ohmyzsh="mate ~/.oh-my-zsh"export PATH="/usr/local/sbin:$PATH"
