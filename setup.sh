@@ -64,6 +64,7 @@ formulas=(
   sqlite
   tree # recursive directory listing
   wifi-password
+  youtube-dl
 )
 
 print 'Intalling brew formulas'
