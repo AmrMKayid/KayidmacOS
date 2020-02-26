@@ -116,7 +116,8 @@ function git_time_since_commit() {
     fi
 }
 
-PROMPT='$nl$username_output$hostname_output$current_dir_output%1(j. [$jobs_bg].)'
+# PROMPT='$nl$username_output$hostname_output$current_dir_output%1(j. [$jobs_bg].)'
+PROMPT='$username_output$hostname_output$current_dir_output%1(j. [$jobs_bg].)'
 GIT_PROMPT='$(out=$(git_prompt_info);if [[ -n $out ]]; then printf %s "$white on $purple$out$white [$(git_prompt_status)$(git_remote_status)$white] $reset";fi)'
 PROMPT+="$GIT_PROMPT"
 PROMPT+='$nl'
