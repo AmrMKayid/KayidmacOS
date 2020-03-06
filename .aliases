@@ -1,7 +1,29 @@
 #--------------- System ---------------#
 alias ds='cd ~/Desktop/'
-alias proxy='export http_proxy="http://amr.kayid:<P@55w0rd>@50.0.0.5:8080/"; export https_proxy="http://amr.kayid:<P@55w0rd>@50.0.0.5:8080/"; export ftp_proxy="http://amr.kayid:<P@55w0rd>@50.0.0.5:8080/";'
+alias mkv2mp4='for i in *.mkv; do
+    ffmpeg -i "$i" -codec copy  -strict -2 "${i%.*}.mp4" && rm "$i"
+done'
 
+alias proxy_on='ssh -D 127.0.0.1:1080 -f -q -C -N -i ~/algo/configs/algo.pem root@46.101.210.4; networksetup -setsocksfirewallproxy Wi-Fi localhost 1080'
+alias proxy_off='lsof -ti:1080 | xargs kill -9; networksetup -setsocksfirewallproxystate Wi-Fi off;'
+
+alias download-yt='youtube-dl -o "%(autonumber)s-%(title)s.%(ext)s" --write-auto-sub --sub-lang en'
+
+#--------------- Kayid ---------------#
+alias kd='cd ~/Desktop/KayDDRL/'
+alias ka='cd ~/Desktop/Kay/KayAI/'
+alias kr='cd ~/Desktop/Kay/KayRes/'
+alias thesis='open /Users/amrmkayid/Desktop/KayDDRL/thesis/build/main.pdf'
+
+#--------------- GUC ---------------#
+alias antlr4='java -jar /usr/local/lib/antlr-4.8-complete.jar'
+alias grun='java org.antlr.v4.gui.TestRig'
+
+alias proxy='export http_proxy="http://amr.kayid:<P@55w0rd>@50.0.0.5:8080/"; export https_proxy="http://amr.kayid:<P@55w0rd>@50.0.0.5:8080/"; export ftp_proxy="http://amr.kayid:<P@55w0rd>@50.0.0.5:8080/";'
+alias guc_wifi='sudo ifconfig en0 ether 70:70:0D:7D:EF:1A; echo "new MAC address: " `sudo ifconfig en0 ether | grep ether`
+'
+alias mac_wifi='sudo ifconfig en0 ether AC:BC:32:77:E9:6B; echo "new MAC address: " `sudo ifconfig en0 ether | grep ether`
+'
 
 #--------------- git ---------------#
 alias gi='git init && cp ~/.gitignore . && cp ~/LICENSE . &&  echo "<h1 align="center"> `basename $PWD` </h1>" >> README.md && git add . && git commit -m "Initial commit"'
@@ -9,12 +31,13 @@ alias gi='git init && cp ~/.gitignore . && cp ~/LICENSE . &&  echo "<h1 align="c
 
 #--------------- Python ---------------#
 alias py3='/Users/amrmkayid/.pyenv/shims/python3'
-
+alias jn='jupyter notebook'
 
 
 #--------------- Game Dev ---------------#
 
 alias love="/Applications/love.app/Contents/MacOS/love"
+alias z='gcc -o out "$@" -framework GLUT -framework OpenGL -Wno-deprecated && ./out'
 
 #--------------- Extra ---------------#
 
@@ -100,7 +123,7 @@ unset jscbin;
 alias c="tr -d '\n' | pbcopy"
 
 # Recursively delete `.DS_Store` files
-alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+alias cleanup_ds="find . -type f -name '*.DS_Store' -ls -delete"
 
 # Empty the Trash on all mounted volumes and the main HDD
 # Also, clear Apple’s System Logs to improve shell startup speed

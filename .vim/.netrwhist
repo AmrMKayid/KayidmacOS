@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/amrmkayid/Desktop/Learning Docker'
+let g:netrw_dirhist_2='/Users/amrmkayid/Desktop'
+let g:netrw_dirhist_3='/Users/amrmkayid'
+let g:netrw_dirhist_4='/Users'
+let g:netrw_dirhist_5='/Users/amrmkayid'
+let g:netrw_dirhist_6='/Users/amrmkayid/Desktop'
+let g:netrw_dirhist_7='/Users/amrmkayid/Desktop/hashcode/out'

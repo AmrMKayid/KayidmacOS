@@ -1,5 +1,5 @@
 [user]
-	name = Amr M. Kayid
+	name = amrmkayid
 	email = amrkayid2027@gmail.com
 [credential]
 	helper = osxkeychain
@@ -15,3 +15,10 @@
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     slg = shortlog -s -n
     slgnm = shortlog -s -n --no-merges
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[diff]
+	submodule = log
