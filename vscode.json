@@ -1,0 +1,196 @@
+{
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "files.eol": "\n",
+    // "editor.formatOnSave": true,
+    "python.formatting.yapfArgs": [
+        "--style",
+        "{based_on_style: google, indent_width: 4, column_limit: 120}"
+    ],
+    "python.formatting.provider": "yapf",
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": false
+        }
+    },
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "emmet.triggerExpansionOnTab": true,
+    //
+    // "editor.tabSize": 4,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.iconTheme": "eq-material-theme-icons-darker",
+    "workbench.colorTheme": "Material Theme Darker High Contrast",
+    "python.jediEnabled": false,
+    "latex-workshop.view.pdf.viewer": "tab",
+    "sync.gist": "c61e8e8e9d9fb99d9992041d1c4406e6",
+    "cSpell.userWords": [
+        "Affectiva",
+        "Behavioural",
+        "Cond",
+        "ENAS",
+        "Harshvardhan",
+        "Kayid",
+        "Kayid's",
+        "MAML",
+        "Mnih",
+        "Numpy",
+        "Omniglot",
+        "SSHing",
+        "astype",
+        "azurerm",
+        "boto",
+        "ckpt",
+        "ckpts",
+        "conv",
+        "cuda",
+        "delim",
+        "deque",
+        "dones",
+        "dtype",
+        "dtypes",
+        "featurenn",
+        "fnns",
+        "glogger",
+        "hackathons",
+        "hparams",
+        "imsize",
+        "inplace",
+        "ipython",
+        "multimodal",
+        "nams",
+        "ndarray",
+        "ndim",
+        "numpify",
+        "nums",
+        "optim",
+        "pbar",
+        "pformat",
+        "preds",
+        "probs",
+        "pygrid",
+        "pytorch",
+        "relu",
+        "rnst",
+        "robotist",
+        "sklearn",
+        "subsymbolic",
+        "tensorify",
+        "tfjson",
+        "tfscript",
+        "toarray",
+        "toctree",
+        "tqdm",
+        "unsqueeze",
+        "vals",
+        "wgts"
+    ],
+    "terminal.integrated.inheritEnv": false,
+    // Text
+    "editor.wordWrap": "on",
+    "html.format.wrapLineLength": 80,
+    "editor.autoIndent": "advanced",
+    "editor.detectIndentation": true,
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "editor.formatOnPaste": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.snippetSuggestions": "top",
+    "editor.rulers": [
+        {
+            "column": 80,
+            "color": "#424142"
+        }
+    ],
+    // Latex
+    "latex-workshop.latex.outDir": "%DIR%/out",
+    "latex-workshop.latex.magic.args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "--output-directory=%OUTDIR%",
+        "%DOC%"
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk",
+            "tools": [
+                "latexmk"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-aux-directory=out",
+                "-output-directory=out",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-aux-directory=out",
+                "-output-directory=out",
+                "%DOC%"
+            ]
+        }
+    ],
+    "diffEditor.ignoreTrimWhitespace": false,
+    "python.pythonPath": "/Users/amrmkayid/anaconda3/envs/cohere/bin/python",
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[latex]": {
+        "editor.defaultFormatter": "James-Yu.latex-workshop"
+    },
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "files.associations": {
+        "*.run": "python",
+        "*.gin": "python"
+    },
+    "files.maxMemoryForLargeFilesMB": 12288,
+    "jupyter.askForKernelRestart": false,
+    "editor.largeFileOptimizations": false,
+    "jupyter.textOutputLimit": 2000000,
+    "jupyter.maxOutputSize": 4000,
+    "python.defaultInterpreterPath": "/Users/amrmkayid/anaconda3/envs/cohere/bin/python",
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.enable": {
+        "*": false,
+        "yaml": true,
+        "plaintext": true,
+        "markdown": false
+    },
+    "python.languageServer": "None",
+    "window.zoomLevel": -2
+}
